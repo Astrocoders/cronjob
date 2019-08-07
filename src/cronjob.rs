@@ -78,7 +78,7 @@ impl CronJob {
         self
     }
 
-    fn get_schedule(&mut self) -> Schedule {
+    pub fn get_schedule(&mut self) -> Schedule {
         let cron = format!("{} {} {} {} {} {} {}",
                            self.seconds.clone().unwrap_or("*".to_string()),
                            self.minutes.clone().unwrap_or("*".to_string()),
